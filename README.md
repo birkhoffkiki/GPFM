@@ -1,2 +1,2 @@
-# DisFM
-The official implementation of DisFM
+# GPFM
+The official implementation of GPFM.
