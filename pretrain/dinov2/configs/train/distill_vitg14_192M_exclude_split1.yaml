@@ -1,0 +1,37 @@
+
+distill:
+  loss_name: radio  # KLDIV, RADIO
+  UNI_loss_ratio: 1.0
+  UNI_patch_ratio: 0.25
+  Phikon_loss_ratio: 0.5
+  Phikon_patch_ratio: 0.125
+  CONCH_loss_ratio: 1.0
+  CONCH_patch_ratio: 0.1
+
+dino:
+  head_n_prototypes: 131072
+  head_bottleneck_dim: 384
+ibot:
+  separate_head: true
+  head_n_prototypes: 131072
+train:
+  batch_size_per_gpu: 32
+  dataset_path: ImageNet22k
+  centering: sinkhorn_knopp
+student:
+  arch: vit_giant2
+  pretrained_weights: dinov2/weights/dinov2_vitg14_pretrain_unblock.pth
+  patch_size: 14
+  drop_path_rate: 0.4
+  ffn_layer: swiglufused
+  block_chunks: 4
+teacher:
+  momentum_teacher: 0.994
+optim:
+  epochs: 500
+  weight_decay_end: 0.2
+  base_lr: 2.0e-04  # learning rate for a batch size of 1024
+  warmup_epochs: 80
+  layerwise_decay: 1.0
+crops:
+  local_crops_size: 98

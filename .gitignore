@@ -1,0 +1,14 @@
+**/.DS_Store
+__pycache__/
+**/__pycache__
+*.log
+*.pt
+*.pth
+*.log
+*.txt
+*.bin
+extract_scripts/*.sh
+home/*
+extract_scripts/logs/*
+heatmaps/*
+models/ckpts/*
