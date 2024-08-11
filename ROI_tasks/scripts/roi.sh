@@ -27,10 +27,10 @@ do
     for model in $models
     do
         echo "processing: $model"
-        python downstream_tasks/roi_retrieval.py \
+        python ROI_tasks/roi_retrieval.py \
             --metric_file_path $output_dir"/"$task"/roi/"$model"/results_eval_roi.json.json" \
             --train_feat_path $data_root"/"$model"/train.pt" \
             --val_feat_path $data_root"/"$model"/val.pt" \
-            --batch_size 256 > "./downstream_tasks/scripts/"roi-$task"-"$model".log" 2>&1
+            --batch_size 256 > "./ROI_tasks/scripts/"roi-$task"-"$model".log" 2>&1
     done
 done

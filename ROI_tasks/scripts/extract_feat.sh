@@ -49,12 +49,12 @@ do
     do
         echo "processing: $model, $task"
         export CUDA_VISIBLE_DEVICES=${gpus[$task]}
-        nohup python downstream_tasks/pre_extract_features.py \
+        nohup python ROI_tasks/pre_extract_features.py \
             --output_dir $output_dir \
             --model_name $model \
             --batch_size 32 \
             --train-dataset $task":train" \
             --val-dataset $task":val" \
-            --test-dataset $task":test" > "./downstream_tasks/scripts/"$task"-"$model".log" 2>&1 &
+            --test-dataset $task":test" > "./ROI_tasks/scripts/"$task"-"$model".log" 2>&1 &
     done
 done

@@ -53,7 +53,26 @@ If you want to change the expert, you could modify the code at `pretrain/dinov2/
 
 # Downstream tasks evaluation
 
+## WSI Classification & Survival Analysis 
+see [CLAM](https://github.com/mahmoodlab/CLAM) for details.
 
+## Report Generation
+see [HistGen](https://github.com/dddavid4real/HistGen) for details.
+## ROI Tasks 
+Step 1: extract features using FM.
+```bash
+cd ROI_tasks
+bash ROI_tasks/scripts/extract_feat.sh
+```
+* ROI classification
+
+```bash
+bash ROI_tasks/scripts/linear.sh
+```
+* ROI retrieval
+```bash
+bash ROI_tasks/scripts/roi.sh
+```
 
 # Citing GPFM
 If you find this repository useful, please consider giving a star ⭐ and citation 🦖: 

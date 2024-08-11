@@ -39,10 +39,10 @@ do
     do
         export CUDA_VISIBLE_DEVICES=${gpus[$model]}
         echo "processing: $model"
-        nohup python downstream_tasks/linear.py \
+        nohup python ROI_tasks/linear.py \
             --output_dir $output_dir"/"$task"/linear/"$model \
             --data_dir $data_root"/"$model \
             --batch_size 256 \
-            --epochs 3000 > "./downstream_tasks/scripts/"linear-$task"-"$model".log" 2>&1 &
+            --epochs 3000 > "./ROI_tasks/scripts/"linear-$task"-"$model".log" 2>&1 &
     done
 done

@@ -12,7 +12,7 @@ export PYTHONPATH="${PYTHONPATH}:./"
 for model in $models
 do
     echo "processing: $model"
-    python downstream_tasks/knn.py \
+    python ROI_tasks/knn.py \
         --output_dir $output_dir"/"$task"/knn/"$model \
         --data_dir $data_root"/"$model \
         --model_name $model \
