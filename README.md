@@ -1,4 +1,12 @@
-# GPFM
+<!-- # GPFM
+## Towards A Generalizable Pathology Foundation Model via Unified Knowledge Distillation -->
+![header](https://capsule-render.vercel.app/api?type=waving&height=140&color=gradient&text=GPFM:&section=header&fontAlign=12&fontSize=45&textBg=false&descAlignY=45&fontAlignY=20&descSize=20&desc=Towards%20A%20Generalizable%20Pathology%20Foundation%20Model%20via%20Unified%20Knowledge%20Distillation&descAlign=52)
+[![Arxiv Page](https://img.shields.io/badge/Arxiv-2407.18449-red?style=flat-square)](https://arxiv.org/abs/2407.18449)
+![GitHub last commit](https://img.shields.io/github/last-commit/birkhoffkiki/GPFM?style=flat-square)
+[![Hugging face](https://img.shields.io/badge/%F0%9F%A4%97%20%20-GPFM-yellow)](https://huggingface.co/majiabo/GPFM)
+[![X (formerly Twitter) Follow](https://img.shields.io/twitter/follow/SMARTLab_HKUST%20)](https://x.com/SMARTLab_HKUST)
+--- 
+
 
 The official implementation of [GPFM](https://arxiv.org/pdf/2407.18449). 
 This project is based on the following great projects:
@@ -42,6 +50,9 @@ If you want to change the expert, you could modify the code at `pretrain/dinov2/
 
 # The overall results
 ![overall_results](docs/overall_results.png)
+
+# Downstream tasks evaluation
+
 
 
 # Citing GPFM
