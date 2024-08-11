@@ -24,6 +24,7 @@ Step 2: extract the features using foundation model. Currently, we support ResNe
 cd root_dir_of_project
 bash extract_scripts/UBC_OCEAN.sh
 ```
+Click [here](https://github.com/birkhoffkiki/GPFM/releases/download/ckpt/GPFM.pth) to download pretrained GPFM.  
 If you want to use other foundation models, please download the weights and put them at `models/ckpts/`. You can see the `models/__init__.py` for the supported model. You can also simply define your own model (see `models/phikon.py`).  
 
 ## Using Huggingface
