@@ -19,6 +19,19 @@ see others works of HKUST [SmartLab](https://hkustsmartlab.github.io/)
 - [ ] Downstream tasks are under preparing  
 
 # How to use GPFM as feature extractor
+## Only using Feature extractor  
+```python
+from models import get_model, get_custom_transformer
+
+model = get_model('GPFM', 0, 1)
+transformer = get_custom_transformer()
+img = PIL.open('img/path')
+img = transformer(img) 
+img = img[None] # to 4D tensor
+feat = model(img) # [N, 1024]
+
+```
+
 ## Using this project
 Take the UBC_OCEAN dataset as an example  
 Step 1: segment the tissue of the WSI  

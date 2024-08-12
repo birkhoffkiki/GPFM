@@ -56,26 +56,7 @@ def get_model(model_name, device, gpu_num):
         from models.transforms_model import vit_huge_patch14_224_21k
         model = vit_huge_patch14_224_21k(device, gpu_num)
         
-    # our models
-    elif model_name in ['mae_vit_large_patch16-1-40000', 'mae_vit_large_patch16-1-140000',
-                        'mae_vit_l_1000slides_19epoch', 'mae_vit_l_10000slides_3epoch', 
-                        'mae_vit_large_patch16-1epoch-180M',
-                        
-                        ]:
-        from models.mae_endoder import mae_pretrained_model
-        model = mae_pretrained_model(device, gpu_num, 'mae_vit_large_patch16',ckpt=__implemented_models[model_name] ,input_size=224)
-    
-    elif model_name in ['mae_vit_huge_patch14_1000slides_9epoch',
-                        'mae_vit_huge_patch14_1000slides_0epoch',
-                        'mae_vit_huge_patch14_1000slides_22epoch',
-                        ]:
-        
-        from models.mae_endoder import mae_pretrained_model
-        model = mae_pretrained_model(device, gpu_num, 'mae_vit_huge_patch14',ckpt=__implemented_models[model_name] ,input_size=224)
-
-    elif model_name in ['dinov2_vitl', 'dinov2_vitl16_split1', 'dinov2_vitl14_split1', 'distill_87499', 'distill_99999',
-                        'distill_174999', 'distill_12499_cls_only', 'distill_137499_cls_only', 'distill_12499',
-                        'distill_379999_cls_only', 'distill_487499_cls_only']:
+    elif model_name in ['GPFM']:
         from models.dinov2 import build_model
         model, _ = build_model(device, gpu_num, model_name, __implemented_models[model_name])
 
@@ -148,21 +129,7 @@ def get_custom_transformer(model_name):
     elif model_name.lower() == 'mmstar':
         from models.mmstar import get_mmstar_trans
         custom_trans = get_mmstar_trans()
-        
-    elif model_name in ['mae_vit_large_patch16-1-40000', 'mae_vit_large_patch16-1-140000',
-                        'mae_vit_l_1000slides_19epoch', 'mae_vit_l_10000slides_3epoch',
-                        'mae_vit_large_patch16-1epoch-180M',
-                        ]:
-        from models.mae_endoder import mae_transform
-        custom_trans = mae_transform(224)
 
-    elif model_name in ['mae_vit_huge_patch14_1000slides_9epoch',
-                        'mae_vit_huge_patch14_1000slides_0epoch',
-                        'mae_vit_huge_patch14_1000slides_22epoch',
-                        ]:
-        from models.mae_endoder import mae_transform
-        custom_trans = mae_transform(224)
-          
     elif model_name == 'ctranspath':
         from models.ctrans import ctranspath_transformers
         custom_trans = ctranspath_transformers()
@@ -174,9 +141,7 @@ def get_custom_transformer(model_name):
         from torchvision import transforms as tt
         custom_trans = tt.Lambda(lambda x: torch.from_numpy(np.array(x)))
     
-    elif model_name in ['dinov2_vitl', 'dinov2_vitl16_split1', 'dinov2_vitl14_split1', 'distill_87499', 'distill_99999',
-                        'distill_174999', 'distill_12499_cls_only', 'distill_137499_cls_only', 'distill_12499', 
-                        'distill_379999_cls_only', 'distill_487499_cls_only']:
+    elif model_name in ['GPFM']:
         from models.dinov2 import build_transform
         custom_trans = build_transform()
         
