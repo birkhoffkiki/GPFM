@@ -22,10 +22,11 @@ see others works of HKUST [SmartLab](https://hkustsmartlab.github.io/)
 ## Only using Feature extractor  
 ```python
 from models import get_model, get_custom_transformer
+from PIL import Image
 
 model = get_model('GPFM', 0, 1)
 transformer = get_custom_transformer()
-img = PIL.open('img/path')
+img = Image.open('img/path')
 img = transformer(img) 
 img = img[None] # to 4D tensor
 feat = model(img) # [N, 1024]
