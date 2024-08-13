@@ -25,7 +25,7 @@ from models import get_model, get_custom_transformer
 from PIL import Image
 
 model = get_model('GPFM', 0, 1)
-transformer = get_custom_transformer()
+transformer = get_custom_transformer('GPFM')
 img = Image.open('img/path')
 img = transformer(img) 
 img = img[None] # to 4D tensor
