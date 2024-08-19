@@ -26,7 +26,7 @@ from PIL import Image
 
 model = get_model('GPFM', 0, 1)
 transformer = get_custom_transformer('GPFM')
-img = Image.open('img/path')
+img = Image.open('img/path') # we prefer image with size of 512*512 (extracted from 40X)
 img = transformer(img) 
 img = img[None] # to 4D tensor
 feat = model(img) # [N, 1024]
