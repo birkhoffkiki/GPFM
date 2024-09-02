@@ -34,16 +34,15 @@ gpus['256_hat_encoder_512_512']=0 #√
 gpus['96_hat_encoder_512_512_nomem']=5
 gpus['hat_encoder_256_32_nomem']=5
 
-n_classes=5
-task="UBC-OCEAN"
-root_log="train_scripts/logs/train_log_"$task"_"
-# results_dir="/jhcnas3/Pathology/experiments/train/"$task
-results_dir="/storage/Pathology/results/experiments/train/splits712/"$task #!
-split_dir="splits712/UBC-OCEAN_100"
-seed=1024
-model_size="small" # since the dim of feature of vit-base is 768    
-preloading="no"
-patch_size="512"
+n_classes=5 # the class number of dataset
+task="UBC-OCEAN" # the name of the dataset, it is defined at `datasets/__init__.py`.
+root_log="train_scripts/logs/train_log_"$task"_" # log file path
+results_dir="/storage/Pathology/results/experiments/train/splits712/"$task # path to save results
+split_dir="splits712/UBC-OCEAN_100" # which splits to use
+seed=1024       # random seed
+model_size="small" # since the dim of feature of vit-base is 768  `ONLY FOR CLAM`, ignore this for other methods
+preloading="no"   # load all data into memory and then train the model
+patch_size="512"    # the patch size of instances
 
 
 for model in $model_names
