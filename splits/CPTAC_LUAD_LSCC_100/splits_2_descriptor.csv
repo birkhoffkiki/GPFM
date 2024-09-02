@@ -1,0 +1,3 @@
+,train,val,test
+LUAD,908,114,114
+LSCC,861,108,108

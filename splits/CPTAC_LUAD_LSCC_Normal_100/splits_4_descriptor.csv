@@ -1,0 +1,4 @@
+,train,val,test
+luad,535,67,67
+lscc,543,68,68
+normal,586,73,73

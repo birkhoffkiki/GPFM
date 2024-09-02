@@ -68,8 +68,15 @@ If you want to change the expert, you could modify the code at `pretrain/dinov2/
 # Downstream tasks evaluation
 
 ## WSI Classification & Survival Analysis 
-see [CLAM](https://github.com/mahmoodlab/CLAM) for details.
-
+This part is base on the [CLAM](https://github.com/mahmoodlab/CLAM) project.  
+Step 3: run mil model to perform WSI classificatino or survival analysis.
+```bash
+cd root_dir_of_project
+bash train_scripts/UBC_OCEAN.sh
+```
+For WSI classification with train-val-test (7:1:2) splits, please use `splits712`  
+For WSI classification with K-fold validation, please use `splits`  
+For Survival Analysis tasks, please use `splits82`  
 ## Report Generation
 see [HistGen](https://github.com/dddavid4real/HistGen) for details.
 ## ROI Tasks 

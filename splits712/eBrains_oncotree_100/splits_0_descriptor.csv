@@ -1,0 +1,13 @@
+,train,val,test
+Metastatic Tumor,32,5,9
+Diffue Glioma,620,88,177
+Ependymomal Tumor,65,9,18
+Soft Tissue,46,7,13
+Embryonal Tumor,23,3,6
+Encapsulated Glioma,182,26,52
+Sellar Tumor,128,18,36
+Chordoma,19,3,6
+Meningothelial Tumor,333,48,95
+Miscellaneous Brain Tumor,102,15,29
+Schwannoma,57,8,16
+Langerhans_cell_histiocytosis,20,3,6
