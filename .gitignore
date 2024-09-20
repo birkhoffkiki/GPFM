@@ -6,7 +6,6 @@ __pycache__/
 *.pth
 *.log
 *.bin
-extract_scripts/*.sh
 home/*
 extract_scripts/logs/*
 heatmaps/*
