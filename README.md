@@ -16,7 +16,6 @@ see others works of HKUST [SmartLab](https://hkustsmartlab.github.io/)
 ![main_figure](docs/main_figure.png) 
 ## TODO List
 - [ ] Huggingface lib is under preparing  
-- [ ] Downstream tasks are under preparing  
 
 # How to use GPFM as feature extractor
 ## Only using Feature extractor  
@@ -26,7 +25,7 @@ from PIL import Image
 
 model = get_model('GPFM', 0, 1)
 transformer = get_custom_transformer('GPFM')
-img = Image.open('img/path') # we prefer image with size of 512*512 (extracted from 40X)
+img = Image.open('docs/demo_pathology.jpg') # we prefer image with size of 512*512 (extracted from 40X)
 img = transformer(img) 
 img = img[None] # to 4D tensor
 img = img.cuda() # load images into gpu
