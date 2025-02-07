@@ -14,8 +14,6 @@ This project is based on the following great projects:
 * [Dinov2](https://github.com/facebookresearch/dinov2)  
 see others works of HKUST [SmartLab](https://hkustsmartlab.github.io/) 
 ![main_figure](docs/main_figure.png) 
-## Reminder!!!
-Please do not use the label file for survival analysis tasks. The cenship is flipped. We will rerun the experiments, fix the problem, and update the repo.
 
 # How to use GPFM as feature extractor
 ## Only using Feature extractor  
