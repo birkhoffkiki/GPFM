@@ -7,6 +7,10 @@
 [![X (formerly Twitter) Follow](https://img.shields.io/twitter/follow/SMARTLab_HKUST%20)](https://x.com/SMARTLab_HKUST)
 --- 
 
+✨ **Exciting News! (April 2025)** Our paper **GPFM** has been accepted by NBME! 🎉  
+
+We released [PrePATH](https://github.com/birkhoffkiki/PrePATH). It supports more models, we recommend using it to extract features.
+
 
 The official implementation of [GPFM](https://arxiv.org/pdf/2407.18449). 
 This project is based on the following great projects:
@@ -15,8 +19,11 @@ This project is based on the following great projects:
 see others works of HKUST [SmartLab](https://hkustsmartlab.github.io/) 
 ![main_figure](docs/main_figure.png) 
 
-# How to use GPFM as feature extractor
-## Only using Feature extractor  
+
+
+# 🚀 How to Use GPFM
+
+## 🔍 As Feature Extractor  
 ```python
 from models import get_model, get_custom_transformer
 from PIL import Image
@@ -31,26 +38,27 @@ feat = model(img) # [N, 1024]
 
 ```
 
-## Using this project
+## 🛠️ Using this project
 Take the UBC_OCEAN dataset as an example  
 Step 1: segment the tissue of the WSI  
 ```bash
 cd Patching
 bash get_coor_scripts/UBC_OCEAN.sh
 ```
+
 Step 2: extract the features using foundation model. Currently, we support ResNet, Ctranspath, PLIP, Phikon, CONCH, UNI, and GPFM.
 ```bash
 # download the weights of released GPFM and put it at `models/ckpts/`.  
 cd root_dir_of_project
 bash extract_scripts/UBC_OCEAN.sh
 ```
-Click [here](https://github.com/birkhoffkiki/GPFM/releases/download/ckpt/GPFM.pth) to download pretrained GPFM.  
+Click [📥](https://github.com/birkhoffkiki/GPFM/releases/download/ckpt/GPFM.pth) to download pretrained GPFM.  
 If you want to use other foundation models, please download the weights and put them at `models/ckpts/`. You can see the `models/__init__.py` for the supported model. You can also simply define your own model (see `models/phikon.py`).  
 
-## Using Huggingface
+## 🤗 Using Huggingface
 see https://huggingface.co/majiabo/GPFM for details. (Note: under preparing)  
 
-# How to use unified knowledge distillation to pretrain your model
+# 🎓 How to use unified knowledge distillation to pretrain your model
 If you use Slurm system, you could use `pretrain/train_script.sh` to pretrain your model. Note that the default Experts used in this project is `UNI`, `CONCH`, and `Phikon`. Please remeber to download the weights of these models and put them at `pretrain/dinov2/weights/`.  
 If you want to change the expert, you could modify the code at `pretrain/dinov2/train/ssl_meta_arch.py` (see line 57).
 
@@ -60,12 +68,12 @@ If you want to change the expert, you could modify the code at `pretrain/dinov2/
 * [Phikon](https://huggingface.co/owkin/phikon)
 
 
-# The overall results
+# 📊 The overall results
 ![overall_results](docs/overall_results.png)
 
-# Downstream tasks evaluation
+# 📚 Downstream tasks evaluation
 
-## WSI Classification & Survival Analysis 
+## 🔬 WSI Classification & Survival Analysis 
 This part is base on the [CLAM](https://github.com/mahmoodlab/CLAM) project.  
 Step 3: run mil model to perform WSI classificatino or survival analysis.
 ```bash
@@ -75,9 +83,9 @@ bash train_scripts/UBC_OCEAN.sh
 For WSI classification with train-val-test (7:1:2) splits, please use `splits712`  
 For WSI classification with K-fold validation, please use `splits`  
 For Survival Analysis tasks, please use `splits82`  
-## Report Generation
+## 📝 Report Generation
 see [HistGen](https://github.com/dddavid4real/HistGen) for details.
-## ROI Tasks 
+## 🎯 ROI Tasks 
 Step 1: extract features using FM.
 ```bash
 cd ROI_tasks
@@ -92,13 +100,11 @@ bash ROI_tasks/scripts/linear.sh
 ```bash
 bash ROI_tasks/scripts/roi.sh
 ```
-
-# Citing GPFM
+# 📜 Citation
 If you find this repository useful, please consider giving a star ⭐ and citation 🦖: 
 
 @article{GPFM,  
   title={Towards A Generalizable Pathology Foundation Model via Unified Knowledge Distillation},  
-  author={Ma, Jiabo and Guo, Zhengrui and Zhou, Fengtao and Wang, Yihui and Xu, Yingxue and Cai, Yu and Zhu, Zhengjie and Jin, Cheng and Jiang, Xinrui and Lin, Yi and Han, Anjia and others},  
-  journal={arXiv preprint arXiv:2407.18449},  
+  author={Ma, Jiabo and Guo, Zhengrui and Zhou, Fengtao and Wang, Yihui and Xu, Yingxue and Li, Jinbang and Yan, Fang and Cai, Yu and Zhu, Zhengjie and Jin, Cheng and Lin, Yi and Jiang, Xinrui and Zhao, Chenglong and Li, Danyi and Han, Anjia and Li, Zhenhui and Chan, Ronald Cheong Kin and Wang, Jiguang and Fei, Peng and Cheng, Kwang-Ting and Zhang, Shaoting and Liang, Li and Chen, Hao},
   year={2024}  
 }
