@@ -11,7 +11,7 @@
 ✨ **Exciting News! (April 2025)** Our paper **GPFM** has been accepted by NBME! 🎉  
 
 - We released [PrePATH](https://github.com/birkhoffkiki/PrePATH). It supports more models, we recommend using it to extract features.
-- See our multimodal knowledge enhanced foundatio model [mSTAR](https://github.com/Innse/mSTAR), it performs better on some tasks.
+- See our multimodal knowledge enhanced foundation model [mSTAR](https://github.com/Innse/mSTAR), it performs better on some tasks.
 
 
 The official implementation of [GPFM](https://arxiv.org/pdf/2407.18449). 
