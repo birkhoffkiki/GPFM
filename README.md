@@ -7,9 +7,11 @@
 [![X (formerly Twitter) Follow](https://img.shields.io/twitter/follow/SMARTLab_HKUST%20)](https://x.com/SMARTLab_HKUST)
 --- 
 
+✨ We release [PathBench](https://birkhoffkiki.github.io/PathBench/) (May 2025), A **Multi-task, Multi-organ Benchmark** for Real-world Clinical Performance Evaluation of Pathology Foundation Models  
 ✨ **Exciting News! (April 2025)** Our paper **GPFM** has been accepted by NBME! 🎉  
 
-We released [PrePATH](https://github.com/birkhoffkiki/PrePATH). It supports more models, we recommend using it to extract features.
+- We released [PrePATH](https://github.com/birkhoffkiki/PrePATH). It supports more models, we recommend using it to extract features.
+- See our multimodal knowledge enhanced foundatio model [mSTAR](https://github.com/Innse/mSTAR), it performs better on some tasks.
 
 
 The official implementation of [GPFM](https://arxiv.org/pdf/2407.18449). 
