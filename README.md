@@ -6,7 +6,7 @@
 [![Hugging face](https://img.shields.io/badge/%F0%9F%A4%97%20%20-GPFM-yellow)](https://huggingface.co/majiabo/GPFM)
 [![X (formerly Twitter) Follow](https://img.shields.io/twitter/follow/SMARTLab_HKUST%20)](https://x.com/SMARTLab_HKUST)
 --- 
-
+✨Journal Link [https://www.nature.com/articles/s41551-025-01488-4](https://www.nature.com/articles/s41551-025-01488-4)  
 ✨ We release [PathBench](https://birkhoffkiki.github.io/PathBench/) (May 2025), A **Multi-task, Multi-organ Benchmark** for Real-world Clinical Performance Evaluation of Pathology Foundation Models  
 ✨ **Exciting News! (April 2025)** Our paper **GPFM** has been accepted by NBME! 🎉  
 
@@ -104,9 +104,11 @@ bash ROI_tasks/scripts/roi.sh
 ```
 # 📜 Citation
 If you find this repository useful, please consider giving a star ⭐ and citation 🦖: 
-
-@article{GPFM,  
-  title={Towards A Generalizable Pathology Foundation Model via Unified Knowledge Distillation},  
-  author={Ma, Jiabo and Guo, Zhengrui and Zhou, Fengtao and Wang, Yihui and Xu, Yingxue and Li, Jinbang and Yan, Fang and Cai, Yu and Zhu, Zhengjie and Jin, Cheng and Lin, Yi and Jiang, Xinrui and Zhao, Chenglong and Li, Danyi and Han, Anjia and Li, Zhenhui and Chan, Ronald Cheong Kin and Wang, Jiguang and Fei, Peng and Cheng, Kwang-Ting and Zhang, Shaoting and Liang, Li and Chen, Hao},
-  year={2024}  
+@article{ma2025generalizable,
+  title={A generalizable pathology foundation model using a unified knowledge distillation pretraining framework},
+  author={Ma, Jiabo and Guo, Zhengrui and Zhou, Fengtao and Wang, Yihui and Xu, Yingxue and Li, Jinbang and Yan, Fang and Cai, Yu and Zhu, Zhengjie and Jin, Cheng and others},
+  journal={Nature Biomedical Engineering},
+  pages={1--20},
+  year={2025},
+  publisher={Nature Publishing Group UK London}
 }
