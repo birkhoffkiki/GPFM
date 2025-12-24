@@ -58,7 +58,7 @@ Click [📥](https://github.com/birkhoffkiki/GPFM/releases/download/ckpt/GPFM.pt
 If you want to use other foundation models, please download the weights and put them at `models/ckpts/`. You can see the `models/__init__.py` for the supported model. You can also simply define your own model (see `models/phikon.py`).  
 
 ## 🤗 Using Huggingface
-see https://huggingface.co/majiabo/GPFM for details. (Note: under preparing)  
+see https://huggingface.co/majiabo/GPFM for details
 
 # 🎓 How to use unified knowledge distillation to pretrain your model
 If you use Slurm system, you could use `pretrain/train_script.sh` to pretrain your model. Note that the default Experts used in this project is `UNI`, `CONCH`, and `Phikon`. Please remeber to download the weights of these models and put them at `pretrain/dinov2/weights/`.  
