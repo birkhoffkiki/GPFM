@@ -6,6 +6,7 @@
 [![Hugging face](https://img.shields.io/badge/%F0%9F%A4%97%20%20-GPFM-yellow)](https://huggingface.co/majiabo/GPFM)
 [![X (formerly Twitter) Follow](https://img.shields.io/twitter/follow/SMARTLab_HKUST%20)](https://x.com/SMARTLab_HKUST)
 --- 
+✨ We recommend using our WSI reading toolkit [ASlide](https://github.com/MrPeterJin/ASlide). It supports more formats (e.g., SPDC, KFB) than OpenSlide, while maintaining the same interface.  
 ✨Journal Link [https://www.nature.com/articles/s41551-025-01488-4](https://www.nature.com/articles/s41551-025-01488-4)  
 ✨ We release [PathBench](https://birkhoffkiki.github.io/PathBench/) (May 2025), A **Multi-task, Multi-organ Benchmark** for Real-world Clinical Performance Evaluation of Pathology Foundation Models  
 ✨ **Exciting News! (April 2025)** Our paper **GPFM** has been accepted by NBME! 🎉  
